@@ -95,7 +95,6 @@
 <body>
 <div class="container">
     <h1>Prediction Result</h1>
-<div style="text-align: center;">
     <p>The prediction results for every customer in the excel sheet is as follows:</p>
     <ol>
         {% for result in prediction %}
@@ -108,40 +107,6 @@
             {% endif %}
         {% endfor %}
     </ol>
-</div>
-
-    <!-- Scatter Plot of Total Transaction Amount vs Total Transaction Count -->
-    <h2>Scatter Plot of Total Transaction Amount vs Total Transaction Count</h2>
-    <img src="data:image/png;base64,{{ scatter_plot1 }}" alt="Total Transaction Amount vs Total Transaction Count">
-
-    <!-- Scatter Plot for Total_Ct_Change_Q4_Q1 vs Total_Amt_Change_Q4_Q1 -->
-    <h2>Total Count Change Q4-Q1 vs Total Amount Change Q4-Q1</h2>
-    <img src="data:image/png;base64,{{ scatter_plot2 }}" alt="Total Count Change Q4-Q1 vs Total Amount Change Q4-Q1">
-
-    <!-- Scatter Plot for Total_Revolving_Bal vs Total_Trans_Amt -->
-    <h2>Total Revolving Bal vs Total Transaction Amount</h2>
-    <img src="data:image/png;base64,{{ scatter_plot3 }}" alt="Total Revolving Bal vs Total Transaction Amount">
-
-    <!-- Pie chart for Education Level -->
-    <h2>Distribution of Education Level</h2>
-    <img src="data:image/png;base64,{{ education_level_pie_chart }}" alt="Distribution of Education Level">
-
-    <!-- Pie chart for Income Category -->
-    <h2>Distribution of Income Category</h2>
-    <img src="data:image/png;base64,{{ income_category_pie_chart }}" alt="Distribution of Income Category">
-
-    <!-- Bar plot for Income Category vs Count -->
-    <h2>Count of Customers by Income Category</h2>
-    <img src="data:image/png;base64,{{ income_category_bar_plot }}" alt="Count of Customers by Income Category">
-
-    <!-- Bar plot for Age Group vs Count -->
-    <h2>Count of Records for Each Age Group</h2>
-    <img src="data:image/png;base64,{{ age_group_bar_plot }}" alt="Count of Records for Each Age Group">
-
-    <!-- Scatter plot for Avg Utilization Ratio vs Credit Limit -->
-    <h2>Avg Utilization Ratio vs Credit Limit</h2>
-    <img src="data:image/png;base64,{{ scatter_plot }}" alt="Avg Utilization Ratio vs Credit Limit">
-
     <a href="/"><button class="back-button">Back</button></a>
 </div>
 </body>

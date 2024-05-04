@@ -1,22 +1,9 @@
-<!-- <!DOCTYPE html>
-<html>
-<head>
-    <title>Upload Excel File</title>
-</head>
-<body>
-    <h1>Upload Excel File</h1>
-    <form action="/predict_from_excel" method="post" enctype="multipart/form-data">
-        <input type="file" name="file" accept=".xlsx, .xls">
-        <input type="submit" value="Upload">
-    </form>
-</body>
-</html> -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Upload Excel File</title>
+    <title>Customer Attrition Prediction</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -43,37 +30,41 @@
             color: #007bff;
         }
 
-        form {
+        .button-container {
             display: flex;
-            flex-direction: column;
-            align-items: center;
+            justify-content: space-around;
+            margin-top: 20px;
         }
 
-        input[type="file"] {
-            margin-bottom: 20px;
-        }
-
-        input[type="submit"] {
-            padding: 10px 20px;
+        .option-button {
+            padding: 10px 0; /* Adjust padding to vertically center content */
+            width: 200px; /* Set fixed width for buttons */
             background-color: #007bff;
             color: #fff;
             border: none;
             border-radius: 5px;
             cursor: pointer;
             transition: background-color 0.3s ease;
+            text-decoration: none; /* Remove default link underline */
         }
 
-        input[type="submit"]:hover {
+        .option-button:hover {
             background-color: #0056b3;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Upload Excel File</h1>
-        <form action="/predict_from_excel" method="post" enctype="multipart/form-data">
-            <input type="file" name="file" accept=".xlsx, .xls">
-            <input type="submit" value="Upload">
+        <h1>Customer Attrition Prediction</h1>
+        <form id="form1" action="/single">
+            <div class="button-container">
+                <button type="submit" class="option-button">Enter a Record</button>
+            </div>
+        </form>
+        <form id="form2" action="/index">
+            <div class="button-container">
+                <button type="submit" class="option-button">Upload CSV</button>
+            </div>
         </form>
     </div>
 </body>
